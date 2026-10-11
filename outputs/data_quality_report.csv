@@ -1,0 +1,35 @@
+dimension,check,failures,status
+Completeness,checking_balance not null,0,PASS
+Completeness,months_loan_duration not null,0,PASS
+Completeness,credit_history not null,0,PASS
+Completeness,purpose not null,0,PASS
+Completeness,amount not null,0,PASS
+Completeness,savings_balance not null,0,PASS
+Completeness,employment_length not null,0,PASS
+Completeness,installment_rate not null,0,PASS
+Completeness,personal_status not null,0,PASS
+Completeness,other_debtors not null,0,PASS
+Completeness,residence_history not null,0,PASS
+Completeness,property not null,0,PASS
+Completeness,age not null,0,PASS
+Completeness,installment_plan not null,0,PASS
+Completeness,housing not null,0,PASS
+Completeness,existing_credits not null,0,PASS
+Completeness,default not null,0,PASS
+Completeness,dependents not null,0,PASS
+Completeness,telephone not null,0,PASS
+Completeness,foreign_worker not null,0,PASS
+Completeness,job not null,0,PASS
+Validity,"months_loan_duration in [1, 120]",0,PASS
+Validity,"amount in [1, 1000000]",0,PASS
+Validity,"age in [18, 100]",0,PASS
+Validity,"installment_rate in [1, 4]",0,PASS
+Validity,"residence_history in [1, 4]",0,PASS
+Validity,"existing_credits in [1, 10]",0,PASS
+Validity,"dependents in [0, 10]",0,PASS
+Validity,checking_balance in allowed list,0,PASS
+Validity,telephone in allowed list,0,PASS
+Validity,foreign_worker in allowed list,0,PASS
+Uniqueness,no duplicate records,0,PASS
+Consistency,default flag is 0/1,0,PASS
+Outlier (review),amount > Q3 + 3 x IQR,24,REVIEW

@@ -1,0 +1,61 @@
+{
+  "rows": 1000,
+  "default_rate": 0.3,
+  "dq_checks": 34,
+  "dq_pass": 33,
+  "dq_review": [
+    {
+      "check": "amount > Q3 + 3 x IQR",
+      "failures": 24
+    }
+  ],
+  "dq_fail": [],
+  "seg_checking": {
+    "< 0 DM": 0.4927,
+    "1 - 200 DM": 0.3903,
+    "> 200 DM": 0.2222,
+    "unknown": 0.1168
+  },
+  "seg_duration": {
+    "<= 12 m": 0.2117,
+    "13-24 m": 0.2968,
+    "25-36 m": 0.3986,
+    "> 36 m": 0.5172
+  },
+  "seg_history": {
+    "fully repaid": 0.625,
+    "fully repaid this bank": 0.5714,
+    "repaid": 0.3189,
+    "delayed": 0.3182,
+    "critical": 0.1706
+  },
+  "auc": 0.786,
+  "gini": 0.573,
+  "best_cutoff": 0.18,
+  "cost_at_050": 903,
+  "cost_at_best": 531,
+  "cost_reduction_pct": 41.2,
+  "recall_at_best": 0.86,
+  "bands": {
+    "A (lowest)": {
+      "loans": 200,
+      "default_rate": 0.06
+    },
+    "B": {
+      "loans": 200,
+      "default_rate": 0.15
+    },
+    "C": {
+      "loans": 200,
+      "default_rate": 0.23
+    },
+    "D": {
+      "loans": 200,
+      "default_rate": 0.42
+    },
+    "E (highest)": {
+      "loans": 200,
+      "default_rate": 0.64
+    }
+  }
+}
